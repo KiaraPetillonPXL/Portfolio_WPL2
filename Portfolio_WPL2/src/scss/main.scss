@@ -1,0 +1,8 @@
+@use '_globals.scss' as *;
+@use '_header.scss';
+@use '_footer.scss';
+
+body{
+    margin: 0;
+    background: $hoofdkleur;
+}

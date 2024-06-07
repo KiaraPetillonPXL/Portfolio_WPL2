@@ -1,0 +1,62 @@
+@use '_globals.scss' as *;
+
+.header {
+  background-color: $hoofdkleur;
+  color: $secondarycolor;
+  padding: 20px 0;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .logo {
+      order: 1;
+      margin: 0;
+      max-width: 100px;
+    }
+
+    nav {
+      order: 2;
+      display: flex;
+      max-width: 100%;
+      justify-content: space-between;
+      padding-left: 8px;
+      padding-right: 8px;
+      height: 60px;
+    }
+  }
+
+  p, ul, li {
+    display: inline-block;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-left: 20px;
+
+      a {
+        color: $secondarycolor;
+        text-decoration: none;
+        padding: 8px 15px;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 5px;
+        background-color: $hoofdkleur; 
+
+        &:hover {
+          background-color: $secondarycolor;
+          color: $hoofdkleur; 
+        }
+      }
+    }
+  }
+}
