@@ -113,15 +113,15 @@
     margin-top: 20px;
     font-weight: bold;
   }
-  
-@media (max-width: 600px) {
-  .contact-form {
-    padding: 10px;
-  }
 
-  button {
-    padding: 10px 15px;
-    font-size: 14px;
+  @media (max-width: 600px) {
+    .contact-form {
+      padding: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
   }
-}
 </style>
