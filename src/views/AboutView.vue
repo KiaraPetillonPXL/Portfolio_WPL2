@@ -37,32 +37,34 @@ export default {
 .about-me {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px;
   color: #ffffff;
 }
 
 .profile-info {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .profile-info img {
-  width: 200px;
-  height: 200px;
-  margin-right: 40px;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
 }
 
 .bio {
-  flex-grow: 1;
+  text-align: center;
 }
 
 .contact-info {
-  margin-top: 40px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .contact-info h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .contact-info ul {
@@ -72,5 +74,28 @@ export default {
 
 .contact-info li {
   margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+  .profile-info {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .profile-info img {
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+
+  .bio {
+    text-align: left;
+  }
+
+  .contact-info {
+    text-align: left;
+  }
 }
 </style>

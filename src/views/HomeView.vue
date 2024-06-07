@@ -116,7 +116,20 @@ export default {
   padding: 20px;
 }
 
-img{
-  max-width: 90%;
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  img{
+    padding-top: 20px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
 }
 </style>
