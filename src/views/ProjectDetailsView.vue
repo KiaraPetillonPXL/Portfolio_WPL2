@@ -22,10 +22,8 @@
 
 <script setup>
 import { useRoute } from 'vue-router';
-import ProjectCard from '../components/projectcardComponent.vue';
 import monimo from '../assets/Monimo.png';
 import vanbeveren from '../assets/vanbeveren.png';
-import about from '../assets/about.png';
 import popsesie from '../assets/popsesie.pdf';
 import taak2 from '../assets/reflectieseminaries.pdf';
 import taak3 from '../assets/werkveld.pdf';
@@ -129,27 +127,28 @@ const project = projects.find(p => p.id === id);
 
 .project-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   margin-top: 50px;
-  padding: 50px;
+  padding: 20px;
 }
 
 .project-details {
-  width: 60%;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
 }
 
-
 embed {
-  width: 800px;
-  max-height: 1000px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
   object-fit: contain;
 }
 
 button {
   font-size: 16px;
   font-weight: 600;
-  display: block;
   border-radius: 20px;
   width: 150px;
   height: 35px;
@@ -158,7 +157,7 @@ button {
   justify-content: center;
   align-items: center;
   border: none;
-  margin-top: 2%;
+  margin-top: 20px;
 }
 
 svg {
@@ -188,7 +187,6 @@ h3 {
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
-
 }
 
 p {
@@ -196,7 +194,23 @@ p {
   font-size: 16px;
   line-height: 1.5;
   color: #ffffff;
+}
 
+@media (min-width: 768px) {
+  .project-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .project-details {
+    width: 60%;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  embed {
+    width: 40%;
+  }
 }
 
 </style>

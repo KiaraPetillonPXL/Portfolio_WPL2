@@ -71,7 +71,7 @@
   }
   </script>
 
-  <style scoped>
+<style scoped>
   .contact-form {
     max-width: 500px;
     margin: 0 auto;
@@ -113,5 +113,15 @@
     margin-top: 20px;
     font-weight: bold;
   }
-  </style>
   
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+</style>
